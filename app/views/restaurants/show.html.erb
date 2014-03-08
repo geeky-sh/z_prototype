@@ -4,7 +4,7 @@
   <div class="space r-tags"><%= @restaurant.categories.join(', ')%></div>
 
   <div class="space r-reviews">
-    <div>Reviews: <span class="r-tags">(rated: <%= @restaurant.overall_rating.round(1) %> )</span><div>
+    <div>Reviews: <span class="r-tags"><% if @restaurant.overall_rating.present?%>(rated: <%= @restaurant.overall_rating.round(1) %> )<% end %></span><div>
     <ul class='rev-list'>
       <% @restaurant.reviews.each do |review|%>
         <li>
