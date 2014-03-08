@@ -1,11 +1,14 @@
-<div>
+<div class="c-box">
+  <h2>Select Category in <%= @location%>:</h2>
+  <span class="loc-sep l-size">|</span>
   <% @all_categories.each do |category| %>
     <span class="loc-sep">
       <%= @categories.include?(category) ? link_to(category, category_path(location: @location, category: category)) : category%>
     </span>
+    <span class="loc-sep l-size">|</span>
   <% end %>
+  <div class="back">
+    <i><%= link_to 'back', root_path%></i>
+  </div>
 </div>
 
-<div style="margin-top: 20px;">
-  <%= link_to 'back to main page', root_path%>
-</div>

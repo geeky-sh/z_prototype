@@ -1,0 +1,7 @@
+$('.errors').remove();
+<% if !flash[:error] %>
+  $('.rev-list').append("<li><%= escape_javascript(render(partial: 'restaurants/review', locals: {review: @review}))%></li>");
+  $('#new_review')[0].reset();
+<% else %>
+  $('#new_review').prepend("<div class='errors'><%= flash[:error]%></div>")
+<% end %>

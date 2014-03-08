@@ -1,5 +1,8 @@
-<div>
+<div class="c-box">
+  <h2>Select Location:</h2>
+  <span class="loc-sep l-size">|</span>
   <% @locations.each do |location| %>
     <span class='loc-sep'><%= link_to location, location_path(location: location) %> <span>
+    <span class="loc-sep l-size">|</span>
   <% end %>
 </div>

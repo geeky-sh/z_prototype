@@ -6,8 +6,47 @@
   padding: 5px;
   font-weight: bold;
 }
+.c-box {
+  padding: 10%;
+  background-color: #bbb;
+  text-align: center;
+}
 
+.l-box {
+  width: 100%;
+  height: 40%;
+  background-color: #bbb;
+  text-align: left;
+  padding: 10px;
+  .space {
+    padding: 5px;
+  }
+  .r-name {
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .r-city {
+    font-style: italic;
+    color: #666;
+    font-size: 12px;
+    padding-left: 5px;
+  }
+}
+
+.back {
+  margin-top: 20px;
+  text-align: left;
+  padding-left: 31%;
+}
+.l-size {
+  font-size: 14px;
+}
+.s-list {
+  text-align: left;
+}
 .c-list {
+  font-style: italic;
+  font-size: 13px;
   padding: 2px;
   margin: 2px;
   display: inline-block;
@@ -15,4 +54,33 @@
 
 .selected {
   background-color: red;
+}
+.add-rev {
+  margin-left: 20px;
+  .main {
+    padding: 10px 0px;
+    font-weight: bold;
+  }
+  .lbl {
+    float: left;
+    width: 9%;
+    font-size: 13px;
+  }
+  .clear {
+    clear: both;
+  }
+}
+.errors {
+  padding-bottom: 10px;
+  color: red;
+  font-style: italic;
+  font-size: 12px;
+}
+.r-tags {
+  font-style: italic;
+  font-size: 11px;
+  color: #777;
+}
+.by {
+  font-size: 12px;
 }

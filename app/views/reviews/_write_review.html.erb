@@ -1,0 +1,26 @@
+<div class="space add-rev" id="write-review">
+  <div class="main">Write review: </div>
+
+  <% if flash[:error].present? %>
+    <div class='errors'><%= flash[:error] = "Successfully created..."%></div>
+  <% end %>
+  <%= form_for(@restaurant.reviews.new, url: "/restaurants/#{@restaurant.id.to_s}/reviews", method: 'post', remote: true) do |f|%>
+    <div>
+      <span class="lbl"><%= f.label(:name, 'Name: ') %></span>
+      <span class="lbl"><%= f.text_field(:name) %></span>
+    </div>
+    <div class="clear"></div>
+    <div>
+      <span class="lbl"><%= f.label(:review, 'Review:')%></span>
+      <span class="lbl"><%= f.text_area(:content, size: '28x5')%><span>
+    </div>
+    <div class="clear"></div>
+    <div>
+      <span class="lbl"><%= f.label(:rating, 'Rating (between 1 to 10 )') %></span>
+      <span class="lbl"><%= f.text_field(:rating)%></span>
+    </div>
+    <div class="clear"></div>
+    <div><%= f.submit('Submit') %></div>
+    <div class="clear"></div>
+  <% end %>
+</div>
