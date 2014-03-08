@@ -1,0 +1,11 @@
+<div>
+  <% @all_categories.each do |category| %>
+    <span class="loc-sep">
+      <%= @categories.include?(category) ? link_to(category, category_path(location: @location, category: category)) : category%>
+    </span>
+  <% end %>
+</div>
+
+<div style="margin-top: 20px;">
+  <%= link_to 'back to main page', root_path%>
+</div>

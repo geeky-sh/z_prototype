@@ -1,0 +1,5 @@
+<div>
+  <% @locations.each do |location| %>
+    <span class='loc-sep'><%= link_to location, location_path(location: location) %> <span>
+  <% end %>
+</div>

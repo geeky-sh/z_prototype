@@ -1,0 +1,18 @@
+<ul>
+  <% @categories.each do |category| %>
+    <li class="c-list">
+      <%= link_to category, category_path(location: @location, category: category), class: ((@category == category) ? "selected" : "")%>
+    </li>
+  <% end %>
+</ul>
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li>
+      <h3><%= link_to restaurant.name, restaurant_path(restaurant)%><h3>
+    </li>
+  <% end %>
+</ul>
+
+<div style="margin-top: 20px;">
+  <%= link_to 'back to main page', root_path%>
+</div>
